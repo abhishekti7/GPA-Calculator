@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.abhishektiwari.gpacalculator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GPAcalculator" />
+        <activity android:name=".forgot_password" />
+        <activity android:name=".activity_sign_up" />
+        <activity
+            android:name=".activity_profile"
+            android:theme="@style/ProfileTheme" />
+        <activity android:name=".update_profile" />
+        <activity android:name=".about" />
+        <activity
+            android:name=".semester1"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester2"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester3"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester4"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester5"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester6"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester7"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".semester8"
+            android:theme="@style/ProfileTheme" />
+        <activity android:name=".settings"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">GPA Calculator</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string-array name="semester_list">
+        <item>--Select--</item>
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+        <item>Semester 3</item>
+        <item>Semester 4</item>
+        <item>Semester 5</item>
+        <item>Semester 6</item>
+        <item>Semester 7</item>
+        <item>Semester 8</item>
+    </string-array>
+
+    <string-array name="grade_list">
+        <item>--Select--</item>
+        <item>Ex</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>P</item>
+    </string-array>
+    <string name="about_the_developer_para">The developer is an under-graduate student at the Indian Institute of Information Technology, Kalyani in the field of Computer Science. This application was made for the College contest Appster. The developer thanks to everyone who praised the effeort.</string>
+
+
+</resources>
