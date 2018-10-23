@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.w3c.dom.Text;
 
+import es.dmoral.toasty.Toasty;
+
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
@@ -86,10 +88,10 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
                     startActivity(new Intent(LoginActivity.this, GPAcalculator.class));
-                    Toast.makeText(LoginActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
+                    Toasty.success(LoginActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
                 }else{
                     progressDialog.dismiss();
-                    Toast.makeText(LoginActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
+                    Toasty.error(LoginActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
                 }
             }
         });

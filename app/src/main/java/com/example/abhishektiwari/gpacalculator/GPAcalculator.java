@@ -1,8 +1,11 @@
 package com.example.abhishektiwari.gpacalculator;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -25,6 +28,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import es.dmoral.toasty.Toasty;
+
+
 public class GPAcalculator extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private FirebaseAuth firebaseAuth;
@@ -37,6 +43,8 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
     private int option;
     private TextView navName,navCollege;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +71,7 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
                     public void onClick(View v) {
                         switch (option){
                             case 0:
-                                Toast.makeText(GPAcalculator.this,"Please select your semester to continue",Toast.LENGTH_SHORT).show();
+                                Toasty.warning(GPAcalculator.this,"Please select your semester to continue",Toast.LENGTH_SHORT).show();
                                 break;
 
                             case 1:

@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import es.dmoral.toasty.Toasty;
+
 public class activity_sign_up extends AppCompatActivity {
 
     private EditText fname, lname, password, email, col;
@@ -59,7 +61,7 @@ public class activity_sign_up extends AppCompatActivity {
                                 sendUserData();
                                 progressDialog.dismiss();
                                 firebaseAuth.signOut();
-                                Toast.makeText(activity_sign_up.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                Toasty.success(activity_sign_up.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(activity_sign_up.this, LoginActivity.class));
                             }
                             else{
@@ -70,7 +72,7 @@ public class activity_sign_up extends AppCompatActivity {
                                 password.setText("");
                                 error_email.setText("Check validity of email");
                                 error_password.setText("Password should contain atleast one UpperCase alphabet, one number and one special character.");
-                                Toast.makeText(activity_sign_up.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                Toasty.error(activity_sign_up.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -109,7 +111,7 @@ public class activity_sign_up extends AppCompatActivity {
         college = col.getText().toString().trim();
 
         if(username.isEmpty() || pass.isEmpty() || mail.isEmpty()) {
-            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT);
+            Toasty.warning(this, "Please enter all the details", Toast.LENGTH_SHORT);
         }else{
             result = true;
         }

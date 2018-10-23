@@ -16,6 +16,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.FileReader;
 
+import es.dmoral.toasty.Toasty;
+
 public class forgot_password extends AppCompatActivity {
 
     private EditText forgot_email;
@@ -36,17 +38,17 @@ public class forgot_password extends AppCompatActivity {
                 String email = forgot_email.getText().toString().trim();
 
                 if(email.equals("")){
-                    Toast.makeText(forgot_password.this, "Please Enter your email to continue",Toast.LENGTH_SHORT).show();
+                    Toasty.warning(forgot_password.this, "Please Enter your email to continue",Toast.LENGTH_SHORT).show();
                 }else{
                     firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(forgot_password.this,"Password reset link sent",Toast.LENGTH_SHORT).show();
+                                Toasty.success(forgot_password.this,"Password reset link sent",Toast.LENGTH_SHORT).show();
                                 finish();
                                 startActivity(new Intent(forgot_password.this, LoginActivity.class));
                             }else{
-                                Toast.makeText(forgot_password.this,"No matching account found",Toast.LENGTH_SHORT).show();
+                                Toasty.error(forgot_password.this,"No matching account found",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
