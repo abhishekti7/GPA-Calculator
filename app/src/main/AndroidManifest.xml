@@ -51,7 +51,9 @@
         <activity
             android:name=".semester8"
             android:theme="@style/ProfileTheme" />
-        <activity android:name=".settings"></activity>
+        <activity android:name=".settings" />
+        <activity android:name=".SlideTutorial"
+            android:theme="@style/ProfileTheme"></activity>
     </application>
 
 </manifest>
