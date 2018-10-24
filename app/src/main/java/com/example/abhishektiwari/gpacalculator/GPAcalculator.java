@@ -1,6 +1,7 @@
 package com.example.abhishektiwari.gpacalculator;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
     private Button submit;
     private int option;
     private TextView navName,navCollege;
+
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -177,4 +179,6 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
         MyDrawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

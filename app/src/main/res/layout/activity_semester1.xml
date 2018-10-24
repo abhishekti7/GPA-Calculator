@@ -82,6 +82,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
@@ -107,6 +108,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
@@ -131,6 +133,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
@@ -156,6 +159,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
@@ -180,10 +184,34 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
                     </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#000">
+                        </View>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Laboratory"
+                            android:textSize="15sp"
+                            android:textColor="#9B9B9B"/>
+                    </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -195,7 +223,7 @@
                             android:layout_marginBottom="10dp"
                             android:textSize="20sp"
                             android:textColor="#000"
-                            android:text="C Programming(Lab.)"/>
+                            android:text="C Programming"/>
 
                         <Spinner
                             android:id="@+id/spinner6"
@@ -204,6 +232,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
@@ -219,7 +248,7 @@
                             android:layout_marginBottom="10dp"
                             android:textSize="20sp"
                             android:textColor="#000"
-                            android:text="Electronics Lab."/>
+                            android:text="Electronics"/>
 
                         <Spinner
                             android:id="@+id/spinner7"
@@ -228,16 +257,30 @@
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
+                            android:textAlignment="center"
                             android:layout_marginRight="10dp">
 
                         </Spinner>
                     </RelativeLayout>
+
                     <Button
-                        android:id="@+id/edit_profile"
+                        android:id="@+id/calc_gpa"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Calculate GPA"/>
+                        android:text="Calculate GPA" />
+
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:textColor="#000"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:visibility="gone"/>
                 </LinearLayout>
+
             </RelativeLayout>
 
 

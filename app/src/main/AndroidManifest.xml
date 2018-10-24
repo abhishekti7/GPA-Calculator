@@ -53,7 +53,8 @@
             android:theme="@style/ProfileTheme" />
         <activity android:name=".settings" />
         <activity android:name=".SlideTutorial"
-            android:theme="@style/ProfileTheme"></activity>
+            android:theme="@style/ProfileTheme">
+        </activity>
     </application>
 
 </manifest>
