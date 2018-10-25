@@ -40,7 +40,7 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
     private FirebaseDatabase firebaseDatabase;
     private Spinner spinner;
     private ArrayAdapter<CharSequence> adapter;
-    private Button submit;
+    private Button submit, check_cgpa;
     private int option;
     private TextView navName;
 
@@ -52,6 +52,7 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpacalculator);
 
+        check_cgpa = (Button)findViewById(R.id.cgpa_calc);
         spinner = (Spinner)findViewById(R.id.spinner);
         submit = (Button)findViewById(R.id.semester_submit);
         adapter = ArrayAdapter.createFromResource(this,R.array.semester_list,android.R.layout.simple_spinner_item);
@@ -112,6 +113,12 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
             }
         });
 
+        check_cgpa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GPAcalculator.this,calculate_cgpa.class));
+            }
+        });
 
         NavigationView mNavigationView = (NavigationView) findViewById(R.id.my_navigation_view);
         if(mNavigationView!=null){

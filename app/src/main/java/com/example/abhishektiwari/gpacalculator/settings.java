@@ -25,6 +25,8 @@ public class settings extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private EditText grade_ex,grade_a,grade_b,grade_c,grade_d,grade_p;
     private Button submit_grades;
+    private int count = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +50,12 @@ public class settings extends AppCompatActivity {
         change_grades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dropdown.setVisibility(View.VISIBLE);
-
+                count++;
+                if(count%2==0){
+                    dropdown.setVisibility(View.INVISIBLE);
+                }else {
+                    dropdown.setVisibility(View.VISIBLE);
+                }
                 DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override

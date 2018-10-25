@@ -52,9 +52,10 @@
             android:name=".semester8"
             android:theme="@style/ProfileTheme" />
         <activity android:name=".settings" />
-        <activity android:name=".SlideTutorial"
-            android:theme="@style/ProfileTheme">
-        </activity>
+        <activity
+            android:name=".SlideTutorial"
+            android:theme="@style/ProfileTheme"></activity>
+        <activity android:name=".calculate_cgpa"></activity>
     </application>
 
 </manifest>
