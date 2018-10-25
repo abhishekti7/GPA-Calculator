@@ -102,7 +102,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value2 = position;
                 }
             }
 
@@ -118,7 +118,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value3 = position;
                 }
             }
 
@@ -134,7 +134,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value4 = position;
                 }
             }
 
@@ -150,7 +150,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value5 = position;
                 }
             }
 
@@ -166,7 +166,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value6 = position;
                 }
             }
 
@@ -182,7 +182,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value7 = position;
                 }
             }
 
@@ -198,7 +198,7 @@ public class semester3 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value8 = position;
                 }
             }
 
@@ -407,17 +407,13 @@ public class semester3 extends AppCompatActivity {
                 break;
 
         }
-        double gpa = value1*2+
-                value2*2+
-                value3*3+
-                value4*4+
-                value5*3+
-                value6*2+
-                value7*2+
-                value8*4;
+        double gpa = value1*2+ value2*2+ value3*3+ value4*4+ value5*3+ value6*2+ value7*2+ value8*4;
         gpa = gpa/22;
-        Toasty.normal(semester3.this,"Success",Toast.LENGTH_SHORT,ContextCompat.getDrawable(semester3.this,R.drawable.cloud)).show();
         result.setText(String.format("Your GPA is: %.2f", gpa));
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference grade = myRef.child("userGrades").child("sem1");
+        grade.setValue(gpa);
         result.setVisibility(View.VISIBLE);
 
     }

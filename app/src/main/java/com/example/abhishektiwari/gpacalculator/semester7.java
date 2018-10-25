@@ -98,7 +98,7 @@ public class semester7 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value2 = position;
                 }
             }
 
@@ -114,7 +114,7 @@ public class semester7 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value3 = position;
                 }
             }
 
@@ -130,7 +130,7 @@ public class semester7 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value4 = position;
                 }
             }
 
@@ -146,7 +146,7 @@ public class semester7 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value5 = position;
                 }
             }
 
@@ -162,7 +162,7 @@ public class semester7 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value6 = position;
                 }
             }
 
@@ -174,7 +174,7 @@ public class semester7 extends AppCompatActivity {
         gpa_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(flag!=9){
+                if(flag!=6){
                     Toasty.error(semester7.this,"Please enter grades for all subjects.",Toast.LENGTH_SHORT).show();
                 }else{
                     calculateGPA();
@@ -322,15 +322,13 @@ public class semester7 extends AppCompatActivity {
                 break;
 
         }
-        double gpa = value1*3+
-                value2*3+
-                value3*3+
-                value4*3+
-                value5*3+
-                value6*6;
+        double gpa = value1*3+ value2*3+ value3*3+ value4*3+ value5*3+ value6*6;
         gpa = gpa/21;
-        Toasty.normal(semester7.this,"Success",Toast.LENGTH_SHORT,ContextCompat.getDrawable(semester7.this,R.drawable.cloud)).show();
-        result.setText("Your GPA is: "+gpa);
+        result.setText(String.format("Your GPA is: %.2f", gpa));
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference grade = myRef.child("userGrades").child("sem1");
+        grade.setValue(gpa);
         result.setVisibility(View.VISIBLE);
 
     }

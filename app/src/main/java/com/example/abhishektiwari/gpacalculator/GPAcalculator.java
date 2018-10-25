@@ -42,7 +42,7 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
     private ArrayAdapter<CharSequence> adapter;
     private Button submit;
     private int option;
-    private TextView navName,navCollege;
+    private TextView navName;
 
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -112,6 +112,7 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
             }
         });
 
+
         NavigationView mNavigationView = (NavigationView) findViewById(R.id.my_navigation_view);
         if(mNavigationView!=null){
             mNavigationView.setNavigationItemSelectedListener(GPAcalculator.this);
@@ -121,28 +122,25 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
         MyDrawer.addDrawerListener(myToggle);
         myToggle.syncState();
 
+        View headerView = mNavigationView.getHeaderView(0);
+        navName = (TextView)headerView.findViewById(R.id.navName);
 
-        navName = (TextView)findViewById(R.id.navName);
-        navCollege = (TextView)findViewById(R.id.navCollege);
-
-        /*firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Toast.makeText(GPAcalculator.this,"You reached here",Toast.LENGTH_SHORT).show();
-                Profile my_profile = dataSnapshot.getValue(Profile.class);
-                navName.setText(my_profile.userProfile.getName());
-                navCollege.setText(my_profile.userProfile.getCollege());
+                Profile profile = dataSnapshot.getValue(Profile.class);
+                navName.setText(profile.userProfile.name);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(GPAcalculator.this, databaseError.getCode(), Toast.LENGTH_SHORT).show();
+
             }
         });
-*/
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
@@ -156,8 +154,6 @@ public class GPAcalculator extends AppCompatActivity implements NavigationView.O
 
     @Override
     public boolean onNavigationItemSelected(MenuItem menuItem) {
-
-        firebaseAuth = FirebaseAuth.getInstance();
         switch(menuItem.getItemId()){
             case R.id.logout:
                 firebaseAuth.signOut();

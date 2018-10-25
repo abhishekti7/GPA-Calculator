@@ -97,7 +97,7 @@ public class semester8 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value2 = position;
                 }
             }
 
@@ -113,7 +113,7 @@ public class semester8 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value3 = position;
                 }
             }
 
@@ -129,7 +129,7 @@ public class semester8 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value4 = position;
                 }
             }
 
@@ -145,7 +145,7 @@ public class semester8 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value5 = position;
                 }
             }
 
@@ -161,7 +161,7 @@ public class semester8 extends AppCompatActivity {
                 }
                 else{
                     flag =flag+1;
-                    value1 = position;
+                    value6 = position;
                 }
             }
 
@@ -322,15 +322,13 @@ public class semester8 extends AppCompatActivity {
                 break;
 
         }
-        double gpa = value1*3+
-                value2*3+
-                value3*3+
-                value4*2+
-                value5*6+
-                value6*2;
+        double gpa = value1*3+ value2*3+ value3*3+ value4*2+ value5*6+ value6*2;
         gpa = gpa/19;
-        Toasty.normal(semester8.this,"Success",Toast.LENGTH_SHORT,ContextCompat.getDrawable(semester8.this,R.drawable.cloud)).show();
-        result.setText("Your GPA is: "+gpa);
+        result.setText(String.format("Your GPA is: %.2f", gpa));
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference grade = myRef.child("userGrades").child("sem1");
+        grade.setValue(gpa);
         result.setVisibility(View.VISIBLE);
 
     }

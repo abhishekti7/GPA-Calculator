@@ -105,7 +105,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value2 = position;
                 }
             }
 
@@ -121,7 +121,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value3 = position;
                 }
             }
 
@@ -137,7 +137,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value4 = position;
                 }
             }
 
@@ -153,7 +153,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value5 = position;
                 }
             }
 
@@ -169,7 +169,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value6 = position;
                 }
             }
 
@@ -185,7 +185,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value7 = position;
                 }
             }
 
@@ -201,7 +201,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value8 = position;
                 }
             }
 
@@ -217,7 +217,7 @@ public class semester2 extends AppCompatActivity {
                 }
                 else{
                     flag = flag+1;
-                    value1 = position;
+                    value9 = position;
                 }
             }
 
@@ -449,8 +449,11 @@ public class semester2 extends AppCompatActivity {
         }
         double gpa = value1*4+value2*3+value3*3+value4*4+value5*3+value6*2+value7*2+value8*2+value9*2;
         gpa = gpa/25;
-        Toasty.normal(semester2.this,"Success",Toast.LENGTH_SHORT,ContextCompat.getDrawable(semester2.this,R.drawable.cloud)).show();
         result.setText(String.format("Your GPA is: %.2f", gpa));
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference grade = myRef.child("userGrades").child("sem1");
+        grade.setValue(gpa);
         result.setVisibility(View.VISIBLE);
 
     }

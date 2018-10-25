@@ -23,7 +23,7 @@
         <item>D</item>
         <item>P</item>
     </string-array>
-    <string name="about_the_developer_para">The developer is an under-graduate student at the Indian Institute of Information Technology, Kalyani in the field of Computer Science. This application was made for the College contest Appster. The developer thanks to everyone who praised the effeort.</string>
+    <string name="about_the_developer_para">The developer is an under-graduate student at the Indian Institute of Information Technology, Kalyani in the field of Computer Science. This application was made for the College contest Appster. The developer thanks to everyone who praised the effort.</string>
     <string name="info1">Calculate your GPA and CGPA with this application exclusive to IIIT Kalyani. Just enter your grades and Voila!</string>
     <string name="info2">Store your GPA performance details on the Cloud. Access the grades by logging into your account. Have your performance evaluation on the go.</string>
     <string name="info3">Just click ont Sign Up to create your account and enjoy the comfort of knowing and evaluating your GPA in minutes!</string>

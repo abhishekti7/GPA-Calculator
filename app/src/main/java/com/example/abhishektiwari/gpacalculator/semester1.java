@@ -364,8 +364,12 @@ public class semester1 extends AppCompatActivity {
         }
         double gpa = value1*4+value2*3+value3*3+value4*4+value5*3+value6*2+value7*2;
         gpa = gpa/21;
-        Toasty.normal(semester1.this,"Success",Toast.LENGTH_SHORT,ContextCompat.getDrawable(semester1.this,R.drawable.cloud)).show();
-        result.setText("Your GPA is: "+gpa);
+        result.setText(String.format("Your GPA is: %.2f", gpa));
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference grade = myRef.child("userGrades").child("sem1");
+        grade.setValue(gpa);
         result.setVisibility(View.VISIBLE);
 
     }
