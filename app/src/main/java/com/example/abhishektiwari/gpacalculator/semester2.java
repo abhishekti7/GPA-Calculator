@@ -1,5 +1,6 @@
 package com.example.abhishektiwari.gpacalculator;
 
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -454,6 +455,8 @@ public class semester2 extends AppCompatActivity {
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         DatabaseReference grade = myRef.child("userGrades").child("sem1");
         grade.setValue(gpa);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/SpecialElite-Regular.ttf");
+        result.setTypeface(typeface);
         result.setVisibility(View.VISIBLE);
 
     }

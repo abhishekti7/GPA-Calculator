@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".calculate_cgpa">
+    tools:context=".calculate_cgpa"
+    android:background="#000">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,11 +34,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 1"/>
                     <EditText
                         android:id="@+id/grade_sem1"
                         android:layout_width="100dp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:textColor="#fff"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_alignParentRight="true"/>
@@ -52,13 +55,15 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 2"/>
                     <EditText
                         android:id="@+id/grade_sem2"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:textColor="#fff"
                         android:layout_alignParentRight="true"/>
                 </RelativeLayout>
                 <RelativeLayout
@@ -71,11 +76,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 3"/>
                     <EditText
                         android:id="@+id/grade_sem3"
+                        android:backgroundTint="@color/colorAccent"
                         android:layout_width="100dp"
+                        android:textColor="#fff"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_alignParentRight="true"/>
@@ -90,11 +97,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 4"/>
                     <EditText
                         android:id="@+id/grade_sem4"
                         android:layout_width="100dp"
+                        android:textColor="#fff"
+                        android:backgroundTint="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_alignParentRight="true"/>
@@ -109,13 +118,15 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 5"/>
                     <EditText
                         android:id="@+id/grade_sem5"
                         android:layout_width="100dp"
+                        android:backgroundTint="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
+                        android:textColor="#fff"
                         android:layout_alignParentRight="true"/>
                 </RelativeLayout>
                 <RelativeLayout
@@ -128,11 +139,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 6"/>
                     <EditText
                         android:id="@+id/grade_sem6"
                         android:layout_width="100dp"
+                        android:textColor="#fff"
+                        android:backgroundTint="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_alignParentRight="true"/>
@@ -147,13 +160,15 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 7"/>
                     <EditText
                         android:id="@+id/grade_sem7"
                         android:layout_width="100dp"
+                        android:textColor="#fff"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
+                        android:backgroundTint="@color/colorAccent"
                         android:layout_alignParentRight="true"/>
                 </RelativeLayout>
                 <RelativeLayout
@@ -166,13 +181,15 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:textSize="20sp"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:text="Semester 8"/>
                     <EditText
                         android:id="@+id/grade_sem8"
                         android:layout_width="100dp"
+                        android:textColor="#fff"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
+                        android:backgroundTint="@color/colorAccent"
                         android:layout_alignParentRight="true"/>
                 </RelativeLayout>
                 <Button
@@ -180,7 +197,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Check CGPA"
-                    android:background="@drawable/login_button"/>
+                    android:background="@drawable/check_cgpa"/>
 
             </LinearLayout>
         </RelativeLayout>
@@ -194,7 +211,7 @@
             android:textAlignment="center"
             android:background="@drawable/textview_background"
             android:textSize="30sp"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:visibility="gone"/>
     </LinearLayout>
 

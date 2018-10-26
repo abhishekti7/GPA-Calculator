@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:theme="@style/ProfileTheme"/>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GPAcalculator" />
-        <activity android:name=".forgot_password" />
-        <activity android:name=".activity_sign_up" />
+        <activity android:name=".GPAcalculator"/>
+        <activity android:name=".forgot_password"
+            android:theme="@style/ProfileTheme"/>
+        <activity android:name=".activity_sign_up"
+            android:theme="@style/ProfileTheme"/>
         <activity
             android:name=".activity_profile"
             android:theme="@style/ProfileTheme" />

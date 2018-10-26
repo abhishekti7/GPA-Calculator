@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="#000"
     tools:context=".LoginActivity">
 
     <ScrollView
@@ -13,23 +13,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="296dp"
-                android:layout_height="163dp"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:src="@drawable/delete" />
+                android:src="@drawable/logo1" />
 
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_person"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Email"
@@ -37,12 +38,12 @@
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColor="#000"
-                android:textColorHint="#000" />
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#000" />
+                android:background="#fff" />
 
             <EditText
                 android:id="@+id/pass"
@@ -50,32 +51,35 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_lock"
+                android:drawableLeft="@drawable/ic_lock_white_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColor="#000"
-                android:textColorHint="#000" />
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000" />
+                android:background="#fff" />
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:text="Remember Me"
+                android:buttonTint="#fff"
                 android:padding="8dp"
                 />
+
             <Button
                 android:id="@+id/login"
                 style="@style/AppTheme.RoundedCornerMaterialButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
                 android:clickable="true"
                 android:text="Log In"
                 android:textAllCaps="false"
@@ -89,14 +93,14 @@
                 android:layout_marginTop="5dp"
                 android:text="Sign Up"
                 android:textAllCaps="false"
-                android:textColor="#000" />
+                android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/password_reset"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clickable="true"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:text="Forgot Password"
                 android:padding="16dp"
                 android:drawableLeft="@drawable/ic_priority_high_black_24dp"

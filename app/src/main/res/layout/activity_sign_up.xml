@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="18dp"
-    android:background="@drawable/login_background"
+    android:background="#000"
     tools:context=".activity_sign_up">
 
     <ScrollView
@@ -14,6 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
             <EditText
@@ -24,14 +26,14 @@
                 android:layout_marginTop="30dp"
                 android:background="@android:color/transparent"
                 android:hint="First Name"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:padding="6dp"
-                android:textColorHint="#000" />
+                android:textColorHint="#fff" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000" />
+                android:background="#fff" />
 
             <EditText
                 android:autofillHints="Last Name"
@@ -42,13 +44,13 @@
                 android:background="@android:color/transparent"
                 android:hint="Last Name"
                 android:padding="6dp"
-                android:textColor="#000"
-                android:textColorHint="#000" />
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000" />
+                android:background="#fff" />
 
 
             <EditText
@@ -61,13 +63,13 @@
                 android:hint="Email Address"
                 android:inputType="textEmailAddress"
                 android:padding="6dp"
-                android:textColor="#000"
-                android:textColorHint="#000" />
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000" />
+                android:background="#fff" />
 
             <TextView
                 android:id="@+id/error_email"
@@ -89,13 +91,13 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="6dp"
-                android:textColor="#000"
-                android:textColorHint="#000" />
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000" />
+                android:background="#fff" />
             <EditText
                 android:autofillHints="College"
                 android:id="@+id/college"
@@ -105,13 +107,13 @@
                 android:background="@android:color/transparent"
                 android:hint="College"
                 android:padding="6dp"
-                android:textColor="#000"
-                android:textColorHint="#000" />
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000" />
+                android:background="#fff" />
 
             <TextView
                 android:id="@+id/error_password"
@@ -132,7 +134,7 @@
                 android:padding="5dp"
                 android:text="Create New Account"
                 android:textAllCaps="false"
-                android:textColor="#000" />
+                android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/login"
@@ -141,7 +143,7 @@
                 android:layout_marginTop="30dp"
                 android:text="Already Signed In? Login."
                 android:textAlignment="center"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="15dp" />
 
         </LinearLayout>
