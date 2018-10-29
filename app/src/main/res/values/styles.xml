@@ -28,6 +28,10 @@
     <style name="AppTheme.RoundedCornerMaterialButton3" parent="Widget.AppCompat.Button.Colored">
         <item name="android:background">@drawable/new_account</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GPAcalculator"/>
+        <activity android:name=".GPAcalculator"
+            android:theme="@style/ProfileTheme"/>
         <activity android:name=".forgot_password"
             android:theme="@style/ProfileTheme"/>
         <activity android:name=".activity_sign_up"
