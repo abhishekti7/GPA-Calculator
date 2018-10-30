@@ -1,2 +1,2 @@
 # GPA-Calculator
-GPA calculator for the Indian Institute of Information Technology, Kalyani.
+GPA calculator exclusively made for the students of Indian Institute of Information Technology, Kalyani.
