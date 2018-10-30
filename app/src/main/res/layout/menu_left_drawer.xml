@@ -2,11 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/main_bg"
     android:orientation="vertical">
     <Space
         android:layout_width="wrap_content"
-        android:background="#000"
         android:layout_height="30dp" />
 
 
@@ -35,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="GPA Calculator"
                 android:textSize="16sp"
+                android:textColor="#fff"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/navInfo"
@@ -42,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:text="Grade Calculation Utility for IIITK"
                 android:textSize="12sp"
+                android:textColor="#fff"
                 android:layout_marginLeft="2dp"
-                android:textColor="#FF6666"
                 android:textStyle="normal"/>
         </LinearLayout>
     </LinearLayout>

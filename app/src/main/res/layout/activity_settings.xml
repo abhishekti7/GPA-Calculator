@@ -13,12 +13,12 @@
         android:padding="10dp">
 
         <RelativeLayout
-            android:id="@+id/change_grades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_marginTop="5dp">
         <TextView
+            android:id="@+id/change_grades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -26,6 +26,7 @@
             android:layout_alignParentLeft="true"
             android:text="Change Grade Values"/>
         <ImageView
+            android:id="@+id/change_grades1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"

@@ -65,7 +65,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
@@ -91,7 +91,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
@@ -116,7 +116,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
@@ -142,7 +142,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
@@ -167,7 +167,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
@@ -204,7 +204,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="Laboratory"
@@ -215,7 +215,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
@@ -240,7 +240,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
+                        <com.example.abhishektiwari.gpacalculator.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"

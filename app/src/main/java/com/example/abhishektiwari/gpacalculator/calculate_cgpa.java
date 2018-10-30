@@ -81,7 +81,7 @@ public class calculate_cgpa extends AppCompatActivity {
                 s8.setText(sem8);
                 progressDialog.dismiss();
                 try{
-                    cgpa = (Integer.parseInt(sem1)+Integer.parseInt(sem1))/2 +(Integer.parseInt(sem3)+Integer.parseInt(sem4))/2 + (Integer.parseInt(sem5)+Integer.parseInt(sem6))/2 + (Integer.parseInt(sem7)+Integer.parseInt(sem8))/2;
+                    cgpa = (Double.parseDouble(sem1)+Double.parseDouble(sem1))/2 +(Double.parseDouble(sem3)+Double.parseDouble(sem4))/2 + (Double.parseDouble(sem5)+Double.parseDouble(sem6))/2 + (Double.parseDouble(sem7)+Double.parseDouble(sem8))/2;
                 }catch(NumberFormatException nfe){
                     nfe.printStackTrace();
                 }

@@ -1,6 +1,7 @@
 package com.example.abhishektiwari.gpacalculator;
 
 import android.app.ProgressDialog;
+import android.media.Image;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,7 +24,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class settings extends AppCompatActivity {
 
-    private RelativeLayout dropdown,change_grades;
+    private RelativeLayout dropdown;
+    private TextView change_grades;
+    private ImageView change_grades1;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private EditText grade_ex,grade_a,grade_b,grade_c,grade_d,grade_p;
@@ -35,7 +40,8 @@ public class settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         dropdown = (RelativeLayout)findViewById(R.id.dropdown);
-        change_grades = (RelativeLayout)findViewById(R.id.change_grades);
+        change_grades = (TextView)findViewById(R.id.change_grades);
+        change_grades1 = (ImageView) findViewById(R.id.change_grades1);
         grade_ex = (EditText)findViewById(R.id.grade_ex);
         grade_a = (EditText)findViewById(R.id.grade_a);
         grade_b = (EditText)findViewById(R.id.grade_b);
@@ -49,6 +55,36 @@ public class settings extends AppCompatActivity {
 
 
         change_grades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count++;
+                if(count%2==0){
+                    dropdown.setVisibility(View.INVISIBLE);
+                }else {
+                    dropdown.setVisibility(View.VISIBLE);
+                }
+                DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Profile profile = dataSnapshot.getValue(Profile.class);
+                        grade_ex.setText(profile.gradeList.getEx());
+                        grade_a.setText(profile.gradeList.getA());
+                        grade_b.setText(profile.gradeList.getB());
+                        grade_c.setText(profile.gradeList.getC());
+                        grade_d.setText(profile.gradeList.getD());
+                        grade_p.setText(profile.gradeList.getP());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(settings.this, databaseError.getCode(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+        });
+        change_grades1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 count++;

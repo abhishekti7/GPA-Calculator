@@ -21,6 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import es.dmoral.toasty.Toasty;
 
 public class semester1 extends AppCompatActivity {
@@ -365,6 +368,9 @@ public class semester1 extends AppCompatActivity {
         }
         double gpa = value1*4+value2*3+value3*3+value4*4+value5*3+value6*2+value7*2;
         gpa = gpa/21;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        gpa = Double.parseDouble(df.format(gpa));
         result.setText(String.format("Your GPA is: %.2f", gpa));
 
         firebaseDatabase = FirebaseDatabase.getInstance();

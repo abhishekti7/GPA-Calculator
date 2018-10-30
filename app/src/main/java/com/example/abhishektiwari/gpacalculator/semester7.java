@@ -20,6 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import es.dmoral.toasty.Toasty;
 
 public class semester7 extends AppCompatActivity {
@@ -325,10 +328,13 @@ public class semester7 extends AppCompatActivity {
         }
         double gpa = value1*3+ value2*3+ value3*3+ value4*3+ value5*3+ value6*6;
         gpa = gpa/21;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        gpa = Double.parseDouble(df.format(gpa));
         result.setText(String.format("Your GPA is: %.2f", gpa));
         firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        DatabaseReference grade = myRef.child("userGrades").child("sem1");
+        DatabaseReference grade = myRef.child("userGrades").child("sem7");
         grade.setValue(gpa);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/SpecialElite-Regular.ttf");
         result.setTypeface(typeface);

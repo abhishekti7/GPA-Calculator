@@ -1,9 +1,11 @@
 package com.example.abhishektiwari.gpacalculator;
 
 import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -58,15 +60,15 @@ public class GPAcalculator extends AppCompatActivity implements TabLayout.OnTabS
     private Spinner spinner;
     private ArrayAdapter<CharSequence> adapter;
     private Button submit, check_cgpa;
-    private int option;
-    private TextView navName;
+    private int option=0;
+    private TextView navtitle,navinfo;
 
     private SlidingRootNav slidingRootNav;
     private static final int POS_DASHBOARD = 0;
     private static final int POS_ACCOUNT = 1;
     private static final int POS_ABOUT = 2;
-    private static final int POS_LOGOUT = 3;
-    private static final int POS_SETTINGS = 5;
+    private static final int POS_LOGOUT = 5;
+    private static final int POS_SETTINGS = 3;
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
@@ -81,11 +83,17 @@ public class GPAcalculator extends AppCompatActivity implements TabLayout.OnTabS
         setSupportActionBar(toolbar);
 
         check_cgpa = (Button)findViewById(R.id.cgpa_calc);
+        navinfo = (TextView)findViewById(R.id.navInfo);
+        navtitle = (TextView)findViewById(R.id.navtitle);
         spinner = (Spinner)findViewById(R.id.spinner);
         submit = (Button)findViewById(R.id.semester_submit);
         adapter = ArrayAdapter.createFromResource(this,R.array.semester_list,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/OpenSans-Regular.ttf");
+        //navtitle.setTypeface(typeface);
+        //navinfo.setTypeface(typeface);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -178,7 +186,6 @@ public class GPAcalculator extends AppCompatActivity implements TabLayout.OnTabS
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
