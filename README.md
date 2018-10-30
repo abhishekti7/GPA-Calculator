@@ -1,7 +1,7 @@
 # GPA-Calculator
 GPA calculator **exclusively** made for the students of Indian Institute of Information Technology, Kalyani.
 
-![Application logo](/app/src/main/logo)
+![Application logo](/app/src/main/logo.png)
 
 ## Installation
 1. Star this repository
