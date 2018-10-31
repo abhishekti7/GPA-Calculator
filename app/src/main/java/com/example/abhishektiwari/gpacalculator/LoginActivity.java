@@ -1,5 +1,6 @@
 package com.example.abhishektiwari.gpacalculator;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -25,7 +26,7 @@ import org.w3c.dom.Text;
 
 import es.dmoral.toasty.Toasty;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
 
     private FirebaseAuth firebaseAuth;
     private EditText name, pass;

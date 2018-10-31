@@ -29,7 +29,6 @@
         <activity
             android:name=".activity_profile"
             android:theme="@style/ProfileTheme" />
-        <activity android:name=".update_profile" />
         <activity android:name=".about" />
         <activity
             android:name=".semester1"

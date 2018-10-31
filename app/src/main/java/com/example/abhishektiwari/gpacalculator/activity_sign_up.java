@@ -1,5 +1,6 @@
 package com.example.abhishektiwari.gpacalculator;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -24,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import es.dmoral.toasty.Toasty;
 
-public class activity_sign_up extends AppCompatActivity {
+public class activity_sign_up extends Activity {
 
     private EditText fname, lname, password, email, col;
     private Button newAccount;
