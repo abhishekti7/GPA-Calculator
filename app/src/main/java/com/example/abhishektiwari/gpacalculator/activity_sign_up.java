@@ -132,7 +132,7 @@ public class activity_sign_up extends Activity {
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
 
         UserProfile userProfile = new UserProfile(username+" "+LastName,mail,college);
-        UserGrades userGrades = new UserGrades(0,0,0,0,0,0,0,0);
+        UserGrades userGrades = new UserGrades("0","0","0","0","0","0","0","0");
         GradeList gradeList = new GradeList("10","9","8","7","6","5");
         Profile profile = new Profile(userProfile,userGrades,gradeList);
         myRef.setValue(profile);

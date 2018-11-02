@@ -68,6 +68,7 @@ public class activity_profile extends AppCompatActivity {
                 user_name.setText(splits[0].toUpperCase()+"\n"+splits[1].toUpperCase());
                 user_email.setText(profile.userProfile.getEmail());
 
+
                 sem1.setText(profile.userGrades.getSem1());
                 sem2.setText(profile.userGrades.getSem2());
                 sem3.setText(profile.userGrades.getSem3());

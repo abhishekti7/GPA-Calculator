@@ -98,45 +98,38 @@ public class GPAcalculator extends AppCompatActivity implements TabLayout.OnTabS
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if(parent.getItemAtPosition(position).equals("--Select--")){
-                    option = position;
-
-                }else{
-                    option = position;
-                }
+                option = position;
 
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         switch (option){
                             case 0:
-                                Toasty.warning(GPAcalculator.this,"Please select your semester to continue",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(GPAcalculator.this,semester1.class));
                                 break;
 
                             case 1:
-                                startActivity(new Intent(GPAcalculator.this,semester1.class));
-                                break;
-                            case 2:
                                 startActivity(new Intent(GPAcalculator.this,semester2.class));
                                 break;
-                            case 3:
+                            case 2:
                                 startActivity(new Intent(GPAcalculator.this,semester3.class));
                                 break;
-                            case 4:
+                            case 3:
                                 startActivity(new Intent(GPAcalculator.this,semester4.class));
                                 break;
-                            case 5:
+                            case 4:
                                 startActivity(new Intent(GPAcalculator.this,semester5.class));
                                 break;
-                            case 6:
+                            case 5:
                                 startActivity(new Intent(GPAcalculator.this,semester6.class));
                                 break;
-                            case 7:
+                            case 6:
                                 startActivity(new Intent(GPAcalculator.this,semester7.class));
                                 break;
-                            case 8:
+                            case 7:
                                 startActivity(new Intent(GPAcalculator.this,semester8.class));
                                 break;
+
                         }
                     }
                 });

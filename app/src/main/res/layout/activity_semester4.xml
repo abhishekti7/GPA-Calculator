@@ -279,6 +279,7 @@
                         android:id="@+id/result"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAlignment="center"
                         android:textSize="40sp"
                         android:textColor="#000"
                         android:layout_gravity="center"

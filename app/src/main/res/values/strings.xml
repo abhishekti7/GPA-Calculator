@@ -3,7 +3,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string-array name="semester_list">
-        <item>--Select--</item>
         <item>Semester 1</item>
         <item>Semester 2</item>
         <item>Semester 3</item>

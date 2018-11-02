@@ -377,7 +377,7 @@ public class semester1 extends AppCompatActivity {
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         DatabaseReference grade = myRef.child("userGrades").child("sem1");
 
-        grade.setValue(gpa);
+        grade.setValue(String.valueOf(gpa));
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/SpecialElite-Regular.ttf");
         result.setTypeface(typeface);
         result.setVisibility(View.VISIBLE);

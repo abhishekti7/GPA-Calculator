@@ -1,12 +1,12 @@
 package com.example.abhishektiwari.gpacalculator;
 
 public class UserGrades {
-    public double sem1,sem2,sem3,sem4,sem5,sem6,sem7,sem8;
+    public String sem1,sem2,sem3,sem4,sem5,sem6,sem7,sem8;
 
     public UserGrades(){
 
     }
-    public UserGrades(double sem1,double sem2,double sem3,double sem4,double sem5,double sem6,double sem7,double sem8){
+    public UserGrades(String sem1,String sem2,String sem3,String sem4,String sem5,String sem6,String sem7,String sem8){
         this.sem1 = sem1;
         this.sem2 = sem2;
         this.sem3 = sem3;
@@ -18,66 +18,66 @@ public class UserGrades {
     }
 
     public String getSem1() {
-        return String.valueOf(sem1);
+        return sem1;
     }
 
-    public void setSem1(double sem1) {
+    public void setSem1(String sem1) {
         this.sem1 = sem1;
     }
 
     public String getSem2() {
-        return String.valueOf(sem2);
+        return sem2;
     }
 
-    public void setSem2(double sem2) {
+    public void setSem2(String sem2) {
         this.sem2 = sem2;
     }
 
     public String getSem3() {
-        return String.valueOf(sem3);
+        return sem3;
     }
 
-    public void setSem3(double sem3) {
+    public void setSem3(String sem3) {
         this.sem3 = sem3;
     }
 
     public String getSem4() {
-        return String.valueOf(sem4);
+        return sem4;
     }
 
-    public void setSem4(double sem4) {
+    public void setSem4(String sem4) {
         this.sem4 = sem4;
     }
 
     public String getSem5() {
-        return String.valueOf(sem5);
+        return sem5;
     }
 
-    public void setSem5(double sem5) {
+    public void setSem5(String sem5) {
         this.sem5 = sem5;
     }
 
     public String getSem6() {
-        return String.valueOf(sem6);
+        return sem6;
     }
 
-    public void setSem6(double sem6) {
+    public void setSem6(String sem6) {
         this.sem6 = sem6;
     }
 
     public String getSem7() {
-        return String.valueOf(sem7);
+        return sem7;
     }
 
-    public void setSem7(double sem7) {
+    public void setSem7(String sem7) {
         this.sem7 = sem7;
     }
 
     public String getSem8() {
-        return String.valueOf(sem8);
+        return sem8;
     }
 
-    public void setSem8(double sem8) {
+    public void setSem8(String sem8) {
         this.sem8 = sem8;
     }
 }

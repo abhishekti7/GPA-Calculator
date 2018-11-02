@@ -216,6 +216,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="40sp"
                         android:textColor="#000"
+                        android:textAlignment="center"
                         android:layout_gravity="center"
                         android:layout_marginTop="40dp"
                         android:visibility="gone"/>
