@@ -86,22 +86,29 @@ public class LoginActivity extends Activity {
     }
 
 
-    public void validate(String username, String password){
+    public void validate(String username, String password) {
         progressDialog.setMessage("Logging In....");
         progressDialog.show();
-
-        firebaseAuth.signInWithEmailAndPassword(username,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    progressDialog.dismiss();
-                    startActivity(new Intent(LoginActivity.this, GPAcalculator.class));
-                    Toasty.success(LoginActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
-                }else{
-                    progressDialog.dismiss();
-                    Toasty.error(LoginActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
+        if (username.isEmpty()) {
+            progressDialog.dismiss();
+            Toasty.error(LoginActivity.this, "Please enter username.", Toast.LENGTH_SHORT).show();
+        } else if (password.isEmpty()) {
+            progressDialog.dismiss();
+            Toasty.error(LoginActivity.this, "Please enter password.", Toast.LENGTH_SHORT).show();
+        } else {
+            firebaseAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        progressDialog.dismiss();
+                        startActivity(new Intent(LoginActivity.this, GPAcalculator.class));
+                        Toasty.success(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    } else {
+                        progressDialog.dismiss();
+                        Toasty.error(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 }
